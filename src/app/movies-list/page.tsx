@@ -7,7 +7,7 @@ function AboutPage() {
 
     const [movies, setMovies] = useState<null | Array<t>>(null)
 
-    fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=edaaecce1d1950eba6e9afa047940085')
+    fetch('https://api.themoviedb.org/3/movie/popular?api_key=edaaecce1d1950eba6e9afa047940085&page=1')
         .then(res => res.json())
         .then(data => setMovies(data.results))
 

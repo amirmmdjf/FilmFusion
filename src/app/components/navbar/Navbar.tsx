@@ -25,7 +25,7 @@ const Navbar = () => {
     
 
     return ( 
-        <div className="p-4 border-b">
+        <div className="p-4 border-b fixed top-0 w-screen bg-white z-50">
             <nav>
                 <ul className="flex">  
                     {
