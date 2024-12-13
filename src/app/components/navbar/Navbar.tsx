@@ -7,43 +7,33 @@ const Navbar = () => {
     
     const pathname = usePathname()
 
-   const navs = [
-    {
-        title: 'Home',
-        link: '/'
-    },
-    {
-        title: 'Movies-list',
-        link: '/movies-list'
-    },
-    {
-        title: 'Contact',
-        link: '/contact-us'
-    },
-    
-   ]
     
 
     return ( 
-        <div className="p-4 border-b fixed top-0 w-screen bg-white z-50">
-            <nav>
-                <ul className="flex">  
-                    {
-                        navs.map((item)=>(
-                            <li key={item.title} className="mr-4">
-                                <Link className={`${item.link === pathname && 'text-blue-600'}`} href={item.link}>{item.title}</Link>
-                            </li>
-                        ))
-                    }
+        <header className="p-4 bg-transparent py-5 px-[170px] text-[24px] text-white z-50">
+            <nav className="flex justify-between">
+                <span className="text-white">Home</span>
+
+                <span className="border-l-2 px-5 flex border-red-700 text-gray-500 items-center">
+                    Search
+                    <svg className="ml-14 w-8 h-8 text-red-700 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </span>
+
+                <ul className="flex gap-[100px]">  
+                    <li>New Releases</li>
+                    <li>
+                        <Link href="/popular">
+                            Popular
+                        </Link>
+                    </li>
+                    <li>Genres</li>
                 </ul>
 
-                {/* <button 
-                    onClick={handleClick}
-                    className="bg-blue-500 text-white px-6 py-2 rounded">
-                    Click Me!
-                </button> */}
+                <button className="bg-red-700 px-3 py-1 rounded-md transition hover:bg-red-600">Login</button>
             </nav>
-        </div>
+        </header>
      );
 }
  

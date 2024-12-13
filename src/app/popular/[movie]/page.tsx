@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 
 const Movie = () => {
   const [movieData, setMovieData] = useState(null);
-  const [loading, setLoading] = useState(true);  // Track loading state
-  const [error, setError] = useState(null);  // Track error state
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const currentRoute = useParams();
   const movieId = currentRoute.movie;

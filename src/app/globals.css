@@ -7,5 +7,13 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
-  padding-top: 57px;
+  background-color: #333; 
+  color: #f1f1f1
+}
+
+.bg-custom {
+  background-image: url('/asset/inside-out2.webp');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%)
 }
